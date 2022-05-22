@@ -1,0 +1,14 @@
+    say FILEHANDLE LIST
+    say FILEHANDLE
+    say LIST
+    say     Just like "print", but implicitly appends a newline. "say LIST"
+            is simply an abbreviation for "{ local $\ = "\n"; print LIST }".
+            To use FILEHANDLE without a LIST to print the contents of $_ to
+            it, you must use a bareword filehandle like "FH", not an
+            indirect one like $fh.
+
+            "say" is available only if the "say" feature is enabled or if it
+            is prefixed with "CORE::". The "say" feature is enabled
+            automatically with a "use v5.10" (or higher) declaration in the
+            current scope.
+
